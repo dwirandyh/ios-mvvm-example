@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RestaurantModel {
+struct RestaurantModel: Equatable {
     var id: String = ""
     var name: String = ""
     var description: String = ""

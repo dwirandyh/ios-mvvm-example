@@ -13,7 +13,6 @@ class AddReviewViewModel {
     var isAnonymous: Dynamic<Bool> = Dynamic(value: false)
 
     func submitReview() {
-        print(self.name.value)
-        print(self.review.value)
+        
     }
 }

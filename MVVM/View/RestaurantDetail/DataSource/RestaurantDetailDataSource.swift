@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 
 class RestaurantDetailDataSource: NSObject, UITableViewDataSource {
-    var viewModel: ViewModel!
+    var viewModel: RestaurantViewModel!
 
-    func registerTableView(viewModel: ViewModel, tableView: UITableView) {
+    func registerTableView(viewModel: RestaurantViewModel, tableView: UITableView) {
         self.viewModel = viewModel
 
         tableView.register(UINib(nibName: "RestaurantDetailCell", bundle: nil), forCellReuseIdentifier: "RestaurantDetailCell")

@@ -7,24 +7,44 @@
 
 import Foundation
 
-class Service {
-    func getRestaurantDetail(onSuccess: @escaping (_ restaurant: RestaurantModel) -> Void ) {
+enum ServiceError: Error {
+    case empty
+    case clientError
+    case serverError
+}
+
+
+protocol Service {
+    func getRestaurantDetail(onResult: @escaping (_ restaurant: Result<RestaurantModel, Error>) -> Void )
+}
+
+class NetworkService: Service {
+    func getRestaurantDetail(onResult: @escaping (_ restaurant: Result<RestaurantModel, Error>) -> Void ) {
         let components = URLComponents(string: "https://restaurant-api.dicoding.dev/detail/rqdv5juczeskfw1e867")
         let request = URLRequest(url: components!.url!)
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            guard let response = response as? HTTPURLResponse else { return }
+            guard let response = response as? HTTPURLResponse else {
+                onResult(.failure(ServiceError.clientError))
+                return
+            }
+
+            if error != nil {
+                onResult(.failure(ServiceError.serverError))
+            }
+
             if let data = data {
                 if response.statusCode == 200 {
                     let decoder = JSONDecoder()
                     let restaurantDetailResponse = try! decoder.decode(RestaurantDetailResponse.self, from: data)
                     let restaurantModel = restaurantDetailResponse.restaurant.mapToModel()
-                    onSuccess(restaurantModel)
+                    onResult(.success(restaurantModel))
                 } else {
-                    return
+                    onResult(.failure(ServiceError.clientError))
                 }
             }
         }
 
         task.resume()
     }
+
 }
