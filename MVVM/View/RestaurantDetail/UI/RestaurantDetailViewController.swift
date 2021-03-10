@@ -9,7 +9,7 @@ import UIKit
 
 class RestaurantDetailViewController: UIViewController {
 
-    var viewModel: RestaurantViewModel = RestaurantViewModel()
+    var viewModel: RestaurantViewModel = RestaurantViewModel(service: NetworkService())
     var dataSource: RestaurantDetailDataSource = RestaurantDetailDataSource()
 
     @IBOutlet weak var tableView: UITableView!

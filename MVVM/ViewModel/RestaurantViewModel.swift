@@ -9,11 +9,15 @@ import Foundation
 
 class RestaurantViewModel {
 
-    var service: Service = NetworkService()
+    var service: Service
 
     var restaurant: Dynamic<RestaurantModel> = Dynamic<RestaurantModel>(value: RestaurantModel())
     var isLoading: Dynamic<Bool> = Dynamic<Bool>(value: false)
     var isError: Dynamic<String> = Dynamic<String>(value: nil)
+
+    init(service: Service) {
+        self.service = service
+    }
 
     func loadRestaurant() {
         self.isLoading.value = true
