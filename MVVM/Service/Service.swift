@@ -47,4 +47,9 @@ class NetworkService: Service {
         task.resume()
     }
 
+    func submitReview(name: String, review: String, isAnonym: Bool, onResult: @escaping ( (_ result: Result<Void, Error>) -> Void)) {
+        // send review data
+        onResult(Result.success(()))
+    }
+
 }
