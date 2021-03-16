@@ -3,14 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C33435B121433016F3989B5 /* Pods_MVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B736426C7D9C7B88455B8512 /* Pods_MVVM.framework */; };
 		8D01120425DE16A200586535 /* UIBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01120325DE16A200586535 /* UIBinding.swift */; };
 		8D5C09FC25DBA91400F78DC8 /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C09FB25DBA91400F78DC8 /* RestaurantModel.swift */; };
 		8D5C0A0025DBAFEC00F78DC8 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C09FF25DBAFEC00F78DC8 /* Service.swift */; };
 		8D6B66D725EE1DDF008D150B /* RestaurantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B66D625EE1DDF008D150B /* RestaurantTests.swift */; };
+		8D7685E5260070E000459380 /* AddReviewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7685E4260070E000459380 /* AddReviewResponse.swift */; };
+		8D7685ED2600744D00459380 /* AddReviewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7685EC2600744D00459380 /* AddReviewState.swift */; };
 		8D7AD52825DBA6E40033E191 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7AD52725DBA6E40033E191 /* AppDelegate.swift */; };
 		8D7AD52A25DBA6E40033E191 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7AD52925DBA6E40033E191 /* SceneDelegate.swift */; };
 		8D7AD52C25DBA6E40033E191 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7AD52B25DBA6E40033E191 /* RestaurantDetailViewController.swift */; };
@@ -26,6 +29,7 @@
 		8D8C4AFC25DD70A8008D7E7E /* RestaurantDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8C4AFA25DD70A8008D7E7E /* RestaurantDetailCell.swift */; };
 		8D8C4AFD25DD70A8008D7E7E /* RestaurantDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C4AFB25DD70A8008D7E7E /* RestaurantDetailCell.xib */; };
 		8D9F358825F743E600D9F8DE /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9F358725F743E600D9F8DE /* Tracker.swift */; };
+		8DA13F5F26011327002492B0 /* ServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA13F5E26011327002492B0 /* ServiceMock.swift */; };
 		8DF8FB9C25DD7CF5003FFED3 /* AddReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF8FB9B25DD7CF5003FFED3 /* AddReviewViewController.swift */; };
 		8DF8FBA025DD7EA6003FFED3 /* AddReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF8FB9F25DD7EA6003FFED3 /* AddReviewViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +52,8 @@
 		8D6B66C925EE1CF6008D150B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D6B66D525EE1DDF008D150B /* MVVMTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MVVMTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		8D6B66D625EE1DDF008D150B /* RestaurantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTests.swift; sourceTree = "<group>"; };
+		8D7685E4260070E000459380 /* AddReviewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewResponse.swift; sourceTree = "<group>"; };
+		8D7685EC2600744D00459380 /* AddReviewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewState.swift; sourceTree = "<group>"; };
 		8D7AD52425DBA6E40033E191 /* MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D7AD52725DBA6E40033E191 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D7AD52925DBA6E40033E191 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,8 +71,12 @@
 		8D8C4AFA25DD70A8008D7E7E /* RestaurantDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailCell.swift; sourceTree = "<group>"; };
 		8D8C4AFB25DD70A8008D7E7E /* RestaurantDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantDetailCell.xib; sourceTree = "<group>"; };
 		8D9F358725F743E600D9F8DE /* Tracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
+		8DA13F5E26011327002492B0 /* ServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMock.swift; sourceTree = "<group>"; };
 		8DF8FB9B25DD7CF5003FFED3 /* AddReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewViewController.swift; sourceTree = "<group>"; };
 		8DF8FB9F25DD7EA6003FFED3 /* AddReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewViewModel.swift; sourceTree = "<group>"; };
+		992E8350BDBDD2BFEC206745 /* Pods-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM.release.xcconfig"; path = "Target Support Files/Pods-MVVM/Pods-MVVM.release.xcconfig"; sourceTree = "<group>"; };
+		AB981C1D8A3C3351DC978DF2 /* Pods-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM.debug.xcconfig"; path = "Target Support Files/Pods-MVVM/Pods-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		B736426C7D9C7B88455B8512 /* Pods_MVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,20 +91,56 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C33435B121433016F3989B5 /* Pods_MVVM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0565D300EF84C3270A481519 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AB981C1D8A3C3351DC978DF2 /* Pods-MVVM.debug.xcconfig */,
+				992E8350BDBDD2BFEC206745 /* Pods-MVVM.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		12EA62C55707DE9480081467 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B736426C7D9C7B88455B8512 /* Pods_MVVM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8D6B66C625EE1CF6008D150B /* MVVMTests */ = {
 			isa = PBXGroup;
 			children = (
 				8D6B66C925EE1CF6008D150B /* Info.plist */,
+				8DA13F5E26011327002492B0 /* ServiceMock.swift */,
 				8D6B66D625EE1DDF008D150B /* RestaurantTests.swift */,
 				8D6B66D525EE1DDF008D150B /* MVVMTests-Bridging-Header.h */,
 			);
 			path = MVVMTests;
+			sourceTree = "<group>";
+		};
+		8D7685E2260070CD00459380 /* Restaurant */ = {
+			isa = PBXGroup;
+			children = (
+				8D8C4AE625DD6B73008D7E7E /* RestaurantResponse.swift */,
+				8D8C4AEA25DD6BA5008D7E7E /* RestaurantDetailResponse.swift */,
+			);
+			path = Restaurant;
+			sourceTree = "<group>";
+		};
+		8D7685E3260070D500459380 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				8D7685E4260070E000459380 /* AddReviewResponse.swift */,
+			);
+			path = Review;
 			sourceTree = "<group>";
 		};
 		8D7AD51B25DBA6E30033E191 = {
@@ -103,6 +149,8 @@
 				8D7AD52625DBA6E40033E191 /* MVVM */,
 				8D6B66C625EE1CF6008D150B /* MVVMTests */,
 				8D7AD52525DBA6E40033E191 /* Products */,
+				0565D300EF84C3270A481519 /* Pods */,
+				12EA62C55707DE9480081467 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -182,8 +230,8 @@
 		8D8C4AE525DD6B67008D7E7E /* Response */ = {
 			isa = PBXGroup;
 			children = (
-				8D8C4AE625DD6B73008D7E7E /* RestaurantResponse.swift */,
-				8D8C4AEA25DD6BA5008D7E7E /* RestaurantDetailResponse.swift */,
+				8D7685E3260070D500459380 /* Review */,
+				8D7685E2260070CD00459380 /* Restaurant */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -227,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				8DF8FB9B25DD7CF5003FFED3 /* AddReviewViewController.swift */,
+				8D7685EC2600744D00459380 /* AddReviewState.swift */,
 			);
 			path = AddReview;
 			sourceTree = "<group>";
@@ -256,9 +305,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D7AD53825DBA6E40033E191 /* Build configuration list for PBXNativeTarget "MVVM" */;
 			buildPhases = (
+				C62D9CCC57143789DA512269 /* [CP] Check Pods Manifest.lock */,
 				8D7AD52025DBA6E40033E191 /* Sources */,
 				8D7AD52125DBA6E40033E191 /* Frameworks */,
 				8D7AD52225DBA6E40033E191 /* Resources */,
+				6569E42AD7CC072800962372 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -328,12 +379,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6569E42AD7CC072800962372 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MVVM/Pods-MVVM-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MVVM/Pods-MVVM-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MVVM/Pods-MVVM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C62D9CCC57143789DA512269 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MVVM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8D6B66C125EE1CF6008D150B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8D6B66D725EE1DDF008D150B /* RestaurantTests.swift in Sources */,
+				8DA13F5F26011327002492B0 /* ServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +435,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D7685E5260070E000459380 /* AddReviewResponse.swift in Sources */,
 				8D7AD52C25DBA6E40033E191 /* RestaurantDetailViewController.swift in Sources */,
 				8D8C4AFC25DD70A8008D7E7E /* RestaurantDetailCell.swift in Sources */,
 				8D7D823225DCDB9F00622873 /* Helper.swift in Sources */,
@@ -349,6 +444,7 @@
 				8D8C4AEB25DD6BA5008D7E7E /* RestaurantDetailResponse.swift in Sources */,
 				8D7AD52825DBA6E40033E191 /* AppDelegate.swift in Sources */,
 				8D7AD54225DBA7760033E191 /* RestaurantViewModel.swift in Sources */,
+				8D7685ED2600744D00459380 /* AddReviewState.swift in Sources */,
 				8D8C4AE725DD6B73008D7E7E /* RestaurantResponse.swift in Sources */,
 				8DF8FB9C25DD7CF5003FFED3 /* AddReviewViewController.swift in Sources */,
 				8DF8FBA025DD7EA6003FFED3 /* AddReviewViewModel.swift in Sources */,
@@ -553,6 +649,7 @@
 		};
 		8D7AD53925DBA6E40033E191 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB981C1D8A3C3351DC978DF2 /* Pods-MVVM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -572,6 +669,7 @@
 		};
 		8D7AD53A25DBA6E40033E191 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 992E8350BDBDD2BFEC206745 /* Pods-MVVM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

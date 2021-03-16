@@ -132,11 +132,3 @@ class RestaurantTests: XCTestCase {
 
 }
 
-class ServiceMock: Service {
-    var getRestaurantDetailStub: Result<RestaurantModel, Error>!
-    var getRestaurantDetailWasCalled: Int = 0
-    func getRestaurantDetail(onResult: @escaping (Result<RestaurantModel, Error>) -> Void) {
-        onResult(self.getRestaurantDetailStub)
-        self.getRestaurantDetailWasCalled += 1
-    }
-}
