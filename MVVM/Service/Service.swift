@@ -16,6 +16,7 @@ enum ServiceError: Error {
 
 protocol Service {
     func getRestaurantDetail(onResult: @escaping (_ restaurant: Result<RestaurantModel, Error>) -> Void )
+
     func postReview(name: String, review: String, restaurantId: String, onResult: @escaping ( (_ result: Result<Void, Error>) -> Void))
 }
 

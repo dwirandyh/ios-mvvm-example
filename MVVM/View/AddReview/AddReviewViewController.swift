@@ -49,8 +49,12 @@ class AddReviewViewController: UIViewController {
                 let alert = UIAlertController(title: "Invalid Form", message: "Form tidak boleh kosong", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                 self.present(alert, animated: true, completion: nil)
-            case .error(let message):
-                let alert = UIAlertController(title: "Error Message", message: message, preferredStyle: .alert)
+            case .serverError:
+                let alert = UIAlertController(title: "Error Message", message: "Server Error", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            case .clientError:
+                let alert = UIAlertController(title: "Error Message", message: "Client Error", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             case .success:

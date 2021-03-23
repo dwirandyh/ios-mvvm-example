@@ -9,6 +9,7 @@ import Foundation
 
 enum AddReviewState {
     case invalidForm
-    case error(String)
+    case serverError
+    case clientError
     case success
 }

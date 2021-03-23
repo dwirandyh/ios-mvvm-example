@@ -21,9 +21,9 @@ class AddReviewViewModel {
     }
 
     func submitReview() {
-        if name.value!.isEmpty || review.value!.isEmpty {
-            viewState.value = .invalidForm
-        } else {
+        let isValid = self.validate()
+
+        if isValid {
             var reviewerName = name.value!
             if isAnonymous.value == true {
                 reviewerName = "Anonymous"
@@ -35,15 +35,22 @@ class AddReviewViewModel {
                     self.viewState.value = .success
                 case .failure(let error):
                     guard let serviceError = error as? ServiceError else { return }
-                    var errorMessage = ""
                     if serviceError == .clientError {
-                        errorMessage = "Gagal mengirim data coba cek koneksi internet anda"
+                        self.viewState.value = .clientError
                     } else if serviceError == .serverError {
-                        errorMessage = "Terjadi gangguan terhadap server"
+                        self.viewState.value = .serverError
                     }
-                    self.viewState.value = .error(errorMessage)
                 }
             }
+        } else {
+            self.viewState.value = .invalidForm
         }
+    }
+
+    func validate() -> Bool {
+        if name.value!.isEmpty || review.value!.isEmpty {
+            return false
+        }
+        return true
     }
 }

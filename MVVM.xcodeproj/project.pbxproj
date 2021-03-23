@@ -30,6 +30,8 @@
 		8D8C4AFD25DD70A8008D7E7E /* RestaurantDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C4AFB25DD70A8008D7E7E /* RestaurantDetailCell.xib */; };
 		8D9F358825F743E600D9F8DE /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9F358725F743E600D9F8DE /* Tracker.swift */; };
 		8DA13F5F26011327002492B0 /* ServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA13F5E26011327002492B0 /* ServiceMock.swift */; };
+		8DCE81F02609ED3100AA2A6F /* AddReviewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCE81EF2609ED3000AA2A6F /* AddReviewViewModelTests.swift */; };
+		8DCE81F42609EE3400AA2A6F /* ServiceMock2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCE81F32609EE3400AA2A6F /* ServiceMock2.swift */; };
 		8DF8FB9C25DD7CF5003FFED3 /* AddReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF8FB9B25DD7CF5003FFED3 /* AddReviewViewController.swift */; };
 		8DF8FBA025DD7EA6003FFED3 /* AddReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF8FB9F25DD7EA6003FFED3 /* AddReviewViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -72,6 +74,8 @@
 		8D8C4AFB25DD70A8008D7E7E /* RestaurantDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantDetailCell.xib; sourceTree = "<group>"; };
 		8D9F358725F743E600D9F8DE /* Tracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
 		8DA13F5E26011327002492B0 /* ServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMock.swift; sourceTree = "<group>"; };
+		8DCE81EF2609ED3000AA2A6F /* AddReviewViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewViewModelTests.swift; sourceTree = "<group>"; };
+		8DCE81F32609EE3400AA2A6F /* ServiceMock2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMock2.swift; sourceTree = "<group>"; };
 		8DF8FB9B25DD7CF5003FFED3 /* AddReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewViewController.swift; sourceTree = "<group>"; };
 		8DF8FB9F25DD7EA6003FFED3 /* AddReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewViewModel.swift; sourceTree = "<group>"; };
 		992E8350BDBDD2BFEC206745 /* Pods-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM.release.xcconfig"; path = "Target Support Files/Pods-MVVM/Pods-MVVM.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 				8DA13F5E26011327002492B0 /* ServiceMock.swift */,
 				8D6B66D625EE1DDF008D150B /* RestaurantTests.swift */,
 				8D6B66D525EE1DDF008D150B /* MVVMTests-Bridging-Header.h */,
+				8DCE81EF2609ED3000AA2A6F /* AddReviewViewModelTests.swift */,
+				8DCE81F32609EE3400AA2A6F /* ServiceMock2.swift */,
 			);
 			path = MVVMTests;
 			sourceTree = "<group>";
@@ -427,6 +433,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D6B66D725EE1DDF008D150B /* RestaurantTests.swift in Sources */,
+				8DCE81F02609ED3100AA2A6F /* AddReviewViewModelTests.swift in Sources */,
+				8DCE81F42609EE3400AA2A6F /* ServiceMock2.swift in Sources */,
 				8DA13F5F26011327002492B0 /* ServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
