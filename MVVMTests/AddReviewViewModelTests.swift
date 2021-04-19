@@ -11,10 +11,10 @@ import XCTest
 class AddReviewViewModelTests: XCTestCase {
 
     var sut: AddReviewViewModel!
-    var service: ServiceMock2!
+    var service: ServiceMock!
 
     override func setUpWithError() throws {
-        self.service = ServiceMock2()
+        self.service = ServiceMock()
         self.sut = AddReviewViewModel(service: service)
     }
 

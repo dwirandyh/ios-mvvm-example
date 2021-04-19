@@ -19,8 +19,13 @@ class ServiceMock: Service {
     }
 
     var postReviewStub: Result<Void, Error>!
-    var postReviewWasCalled: Int = 0
-    func postReview(name: String, review: String, restaurantId: String, onResult: @escaping ((Result<Void, Error>) -> Void)) {
+    var postReviewArgumentCaptor: (name: String, review: String)!
+    var postReviewCalled: Int = 0
 
+    func postReview(name: String, review: String, restaurantId: String, onResult: @escaping ((Result<Void, Error>) -> Void)) {
+        self.postReviewCalled += 1
+        self.postReviewArgumentCaptor = (name, review)
+
+        onResult(self.postReviewStub)
     }
 }

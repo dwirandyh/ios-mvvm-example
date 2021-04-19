@@ -30,21 +30,19 @@ class RestaurantTests: XCTestCase {
 
         // record data changed
         let restaurantResultExpectation = expectation(description: "Restaurant data is loaded")
+        restaurantResultExpectation.expectedFulfillmentCount = 2
         var restaurantResult: [RestaurantModel] = []
         self.viewModel.restaurant.observe(on: self) { (restaurantModel) in
             restaurantResult.append(restaurantModel)
-            if restaurantResult.count == 2 {
-                restaurantResultExpectation.fulfill()
-            }
+            restaurantResultExpectation.fulfill()
         }
 
         let isLoadingExpectation = expectation(description: "Loading state is changed")
+        isLoadingExpectation.expectedFulfillmentCount = 3
         var isLoadingResult: [Bool] = []
         self.viewModel.isLoading.observe(on: self) { (isLoading) in
             isLoadingResult.append(isLoading)
-            if isLoadingResult.count == 3 {
-                isLoadingExpectation.fulfill()
-            }
+            isLoadingExpectation.fulfill()
         }
 
         // run the unit
@@ -67,21 +65,19 @@ class RestaurantTests: XCTestCase {
 
         // Record state changed
         let isLoadingExpectation = expectation(description: "Loading state is changed")
+        isLoadingExpectation.expectedFulfillmentCount = 3
         var isLoadingResult: [Bool] = []
         self.viewModel.isLoading.observe(on: self) { (isLoading) in
             isLoadingResult.append(isLoading)
-            if isLoadingResult.count == 3 {
-                isLoadingExpectation.fulfill()
-            }
+            isLoadingExpectation.fulfill()
         }
 
         let errorExpectation = expectation(description: "Error state is changed")
+        errorExpectation.expectedFulfillmentCount = 1
         var errorMessageResult: String = ""
         self.viewModel.isError.observe(on: self) { (errorMessage) in
             errorMessageResult = errorMessage
-            if !errorMessageResult.isEmpty {
-                errorExpectation.fulfill()
-            }
+            errorExpectation.fulfill()
         }
 
         self.viewModel.loadRestaurant()
@@ -101,21 +97,19 @@ class RestaurantTests: XCTestCase {
 
         // Record state changed
         let isLoadingExpectation = expectation(description: "Loading state is changed")
+        isLoadingExpectation.expectedFulfillmentCount = 3
         var isLoadingResult: [Bool] = []
         self.viewModel.isLoading.observe(on: self) { (isLoading) in
             isLoadingResult.append(isLoading)
-            if isLoadingResult.count == 3 {
-                isLoadingExpectation.fulfill()
-            }
+            isLoadingExpectation.fulfill()
         }
 
         let errorExpectation = expectation(description: "Error state is changed")
+        errorExpectation.expectedFulfillmentCount = 1
         var errorMessageResult: String = ""
         self.viewModel.isError.observe(on: self) { (errorMessage) in
             errorMessageResult = errorMessage
-            if !errorMessageResult.isEmpty {
-                errorExpectation.fulfill()
-            }
+            errorExpectation.fulfill()
         }
 
         self.viewModel.loadRestaurant()
@@ -129,6 +123,5 @@ class RestaurantTests: XCTestCase {
         // Behavior Verification
         XCTAssertEqual(self.service.getRestaurantDetailWasCalled, 1)
     }
-
 }
 
